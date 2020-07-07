@@ -1,0 +1,38 @@
+<% content_for :page_title, "All Teams"%>
+
+<div class="section">
+  <div class="container">
+   <% @teams.each do |team| %>
+    <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <div class="level">
+              <div class="level-left">
+                <p class="level-item">
+                  <div>
+                    <p class="title is-3"> <%= link_to team.name, team %> </p>
+                  </div>
+                </p>
+              </div>
+              <div class="level-right">
+                <p class="level-item">
+                  <%= link_to "Edit", edit_team_path(team), class: "button" %>
+                </p>
+                <p class="level-item">
+                  <%= link_to "Delete", team_path(team), method: :delete, data: { confirm: "Are you sure? " }, class: "button is-danger" %>
+                </p>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <div class="content">
+          <%= team.description %>
+        </div>
+      </div>
+    </div>
+   <% end %>
+  </div>
+</div>
+

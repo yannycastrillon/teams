@@ -10,6 +10,36 @@
   </head>
 
   <body>
+    <section class="hero is-info is-small">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <%= link_to 'Teams App', root_path, class: "navbar-item" %>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroB" class="navbar-menu">
+              <div class="navbar-end">
+                <%= link_to 'Create New Team', new_team_path, class: "navbar-item" %>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            <%= yield :page_title %>
+          </p>
+        </div>
+      </div>
+    </section>
+
     <%= yield %>
   </body>
 </html>
