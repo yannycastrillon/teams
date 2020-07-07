@@ -17,3 +17,6 @@
 `bundle exec guard` => Run Guard.
 
 
+*Objectives*
+
+Implement the Players model and display them on the erb files corresponding to each team.
